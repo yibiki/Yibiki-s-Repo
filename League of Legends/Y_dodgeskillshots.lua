@@ -2,7 +2,7 @@ require 'winapi'
 require 'vals_lib'
 local uiconfig = require 'uiconfig'
 local send = require 'SendInputScheduled'
-local version = '1.15' -- Originally from Val, edited by Yibiki
+local version = '1.16' -- Originally from Val, edited by Yibiki
 local skillshotArray = {}
 local colorcyan,coloryellow = 0xFF00FFFF,0xFFFFFF00
 local xa,xb,ya,yb = 100/1920*GetScreenX(),1820/1920*GetScreenX(),100/1080*GetScreenY(),980/1080*GetScreenY()
@@ -449,6 +449,9 @@ function LoadTable()
 			if ee.name == 'Jinx' then
 				table.insert(skillshotArray,{name=ee.SpellNameW,shot=0,lastshot=0,skillshotpoint={},maxdistance=1500,type=1,radius=70,color=colorcyan,time=((1500/3.3)+600)/1000,isline=true,p1x=0,p1y=0,p1z=0,p2x=0,p2y=0,p2z=0})
 				table.insert(skillshotArray,{name=ee.SpellNameR,shot=0,lastshot=0,skillshotpoint={},maxdistance=10000,type=1,radius=145,color=colorcyan,time=4,isline=true,p1x=0,p1y=0,p1z=0,p2x=0,p2y=0,p2z=0})
+			end
+			if ee.name == 'Kalista' then
+				table.insert(skillshotArray,{name="kalistamysticshotmis",shot=0,lastshot=0,skillshotpoint={},maxdistance=950,type=1,radius=50,color=colorcyan,time=((1450/2.3)+260)/1000,isline=true,p1x=0,p1y=0,p1z=0,p2x=0,p2y=0,p2z=0})
 			end
 			if ee.name == 'Karma' then
 				table.insert(skillshotArray,{name=ee.SpellNameQ,shot=0,lastshot=0,skillshotpoint={},maxdistance=950,type=1,radius=100,color=colorcyan,time=((950/1.7)+260)/1000,isline=true,p1x=0,p1y=0,p1z=0,p2x=0,p2y=0,p2z=0})
